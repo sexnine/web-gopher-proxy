@@ -1,0 +1,14 @@
+diff --git a/node_modules/@sveltejs/adapter-cloudflare/index.js b/node_modules/@sveltejs/adapter-cloudflare/index.js
+index ccf6887..6221709 100644
+--- a/node_modules/@sveltejs/adapter-cloudflare/index.js
++++ b/node_modules/@sveltejs/adapter-cloudflare/index.js
+@@ -57,7 +57,8 @@ export default function (options = {}) {
+ 				bundle: true,
+ 				loader: {
+ 					'.wasm': 'copy'
+-				}
++				},
++        external: ["cloudflare:sockets"],
+ 			});
+ 		}
+ 	};
