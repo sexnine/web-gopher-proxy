@@ -37,7 +37,9 @@ export const getFromGopherServer = async (
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
+    console.log("reading");
     const { done, value }: ReadableStreamReadResult<Uint8Array> = await reader.read();
+    console.log(done, value);
     if (done) break;
 
     chunks.push(value);
